@@ -7,14 +7,15 @@ function App() {
     <div className="App">
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home">꼽냐</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#home">시</Nav.Link>
+            <Nav.Link href="#features">발</Nav.Link>
+            <Nav.Link href="#pricing">아</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
+      <div className="main-bg"></div>
     </div>
   );
 }
