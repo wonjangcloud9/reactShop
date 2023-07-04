@@ -1,6 +1,6 @@
 .main-bg {
   height: 300px;
-  background-image: url("/src/snowball.jpeg");
+  background-image: url("/src/img/snowball.jpeg");
   background-size: cover;
   background-position: center;
 }

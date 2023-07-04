@@ -1,6 +1,10 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Row, Col } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
+import drink from "./img/drink.png";
+import pill from "./img/pill.jpeg";
+import sex from "./img/sex.webp";
 
 function App() {
   return (
@@ -16,6 +20,43 @@ function App() {
         </Container>
       </Navbar>
       <div className="main-bg"></div>
+      <Container>
+        <Row>
+          <Col sm={4}>
+            <Image
+              src={drink}
+              rounded
+              style={{
+                width: "100%",
+                height: "200px",
+                objectFit: "cover",
+              }}
+            />
+          </Col>
+          <Col sm={4}>
+            <Image
+              src={pill}
+              rounded
+              style={{
+                width: "100%",
+                height: "200px",
+                objectFit: "cover",
+              }}
+            />
+          </Col>
+          <Col sm={4}>
+            <Image
+              src={sex}
+              rounded
+              style={{
+                width: "100%",
+                height: "200px",
+                objectFit: "cover",
+              }}
+            />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
