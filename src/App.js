@@ -3,17 +3,31 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Nav, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import data from "./data.js";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 function App() {
+  let navigate = useNavigate();
+
   return (
     <div className="App">
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home">꼽냐</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">시</Nav.Link>
-            <Nav.Link href="detail">발</Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              시
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                navigate("/detail");
+              }}
+            >
+              발
+            </Nav.Link>
             <Nav.Link href="#pricing">아</Nav.Link>
           </Nav>
         </Container>
