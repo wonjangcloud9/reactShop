@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Nav, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import data from "./data.js";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Detail from "./Detail.js";
 
 function App() {
   let navigate = useNavigate();
@@ -64,27 +65,7 @@ function App() {
             </>
           }
         />
-        <Route
-          path="/detail"
-          element={
-            <div className="container">
-              <div className="row">
-                <div className="col-md-6">
-                  <img
-                    src="https://codingapple1.github.io/shop/shoes1.jpg"
-                    width="100%"
-                  />
-                </div>
-                <div className="col-md-6">
-                  <h4 className="pt-5">상품명</h4>
-                  <p>상품설명</p>
-                  <p>120000원</p>
-                  <button className="btn btn-danger">주문하기</button>
-                </div>
-              </div>
-            </div>
-          }
-        />
+        <Route path="/detail" element={Detail} />
       </Routes>
     </div>
   );
