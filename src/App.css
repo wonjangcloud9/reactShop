@@ -3,6 +3,7 @@
   background-image: url("/src/img/snowball.jpeg");
   background-size: cover;
   background-position: center;
+  margin-bottom: 1rem;
 }
 
 .App {

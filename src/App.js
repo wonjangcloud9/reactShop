@@ -2,9 +2,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Nav, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
-import drink from "./img/drink.png";
-import pill from "./img/pill.jpeg";
-import sex from "./img/sex.webp";
+
+import data from "./data.js";
 
 function App() {
   return (
@@ -22,39 +21,25 @@ function App() {
       <div className="main-bg"></div>
       <Container>
         <Row>
-          <Col sm={4}>
-            <Image
-              src={drink}
-              rounded
-              style={{
-                width: "100%",
-                height: "200px",
-                objectFit: "cover",
-              }}
-            />
-          </Col>
-          <Col sm={4}>
-            <Image
-              src={pill}
-              rounded
-              style={{
-                width: "100%",
-                height: "200px",
-                objectFit: "cover",
-              }}
-            />
-          </Col>
-          <Col sm={4}>
-            <Image
-              src={sex}
-              rounded
-              style={{
-                width: "100%",
-                height: "200px",
-                objectFit: "cover",
-              }}
-            />
-          </Col>
+          {data.map((item, index) => {
+            return (
+              <Col sm={4} key={index}>
+                <Image
+                  src={item.image}
+                  rounded
+                  style={{
+                    width: "100%",
+                    height: "200px",
+                    objectFit: "cover",
+                  }}
+                />
+                <div style={{ marginBottom: "1rem" }}></div>
+                <h4>{item.title}</h4>
+                <p>{item.content}</p>
+                <p>{item.price}</p>
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </div>
